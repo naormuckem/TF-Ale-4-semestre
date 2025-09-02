@@ -1,0 +1,19 @@
+name : "Meu Primeiro Workflow de CI"
+on:
+    push:
+      branches: [ "main" ]
+    workflow_dispatch:
+    
+    
+jobs:
+
+  primeiro-job:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Exibir RA e Nome
+       run: echo "6324552 - Naor!"
+     - name: Mostra o diretório de trabalho
+       run: pwd
+     - name: Lista os arquivos no diretório home
+       run: echo "TF-Ale-4-semestre:" ${{ github.repository }}
